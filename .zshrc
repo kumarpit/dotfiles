@@ -112,16 +112,24 @@ source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
 source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 chruby ruby-3.2.2
 
-export LIBRARY_PATH=/opt/homebrew/Cellar/criterion/2.4.1_2/lib/
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias me='cd ~/developer/personal/kumarpit.github.io'
-alias gt='cp /Users/krarpit/school/templates/*.tex'
-alias rendf='latexmk --shell-escape -nobibtex -pvc -pdf'
+alias me='cd ~/developer/personal/me3'
+alias gt='cp /Users/krarpit/school/tufte-template.zip tufte-template.zip && unzip tufte-template.zip'
+alias rendf='latexmk --shell-escape -nobibtex -pvc -pdf -outdir=build'
 alias notes='cd ~/school/2023:24W'
-alias g++='g++-13'
+alias gcc='gcc-14'
+alias lg='lazygit'
+alias g='git'
+alias gch='git checkout'
+alias nb='newsboat'
+alias tm='tmux'
+alias clean-pdf='rm -r -f *.aux *.log *.lof *.gz *.toc *.bak~ tufte-template.zip > /dev/null'
+alias nv='nvim'
+alias rrr='nvim scp://krarpit7@remote.students.cs.ubc.ca/'
+alias mlr='make all && ./raycast'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -131,3 +139,15 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 export PATH="$HOME/go/bin:/opt/homebrew/opt/sphinx-doc/bin:$PATH"
 export GOPATH="$HOME/go"
+
+function erl {
+  /opt/homebrew/bin/erl erl -eval 'code:add_path("/Users/krarpit/School/2024-25F/cpsc418/lib")' "$@"
+}
+
+eval "$(zoxide init zsh)"
+
+# Created by `pipx` on 2024-08-11 20:27:20
+export PATH="$PATH:/Users/krarpit/.local/bin"
+export PATH="$PATH:/Applications/Racket v8.14/bin"
+export PATH="$PATH:/~/.config/emacs/bin"
+ctags=/opt/homebrew/bin/ctags
