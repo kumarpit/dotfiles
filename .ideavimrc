@@ -64,14 +64,14 @@ inoremap <C-k> <Action>(PopupMenu-selectPrev)
 "" ========================================================
 
 " Comment lines
-map <leader>c <action>(CommentByLineComment)
+map <leader>cc <action>(CommentByLineComment)
 
 " Open NERDTree (use q to exit)
-map <leader>x :NERDTreeToggle<CR>
+map <leader>e :NERDTreeToggle<CR>
 
 " Folding
-map <leader>ew :action CollapseAllRegions<CR>
-map <leader>ee :action ExpandAllRegions<CR>
+map <leader>cw :action CollapseAllRegions<CR>
+map <leader>ce :action ExpandAllRegions<CR>
 
 " Display options
 map <leader>dd <action>(ToggleDistractionFreeMode)
@@ -111,5 +111,5 @@ nmap <leader>gf <Action>(Back)
 nmap <leader>gb <Action>(Forward)
 
 " Errors
-map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
-map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
+map <leader>xn <Action>(ReSharperGotoNextErrorInSolution)
+map <leader>xp <Action>(ReSharperGotoPrevErrorInSolution)
