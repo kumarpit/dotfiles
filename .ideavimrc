@@ -113,6 +113,7 @@ nmap <leader>gb <Action>(Forward)
 " Errors
 map <leader>xn <Action>(ReSharperGotoNextErrorInSolution)
 map <leader>xp <Action>(ReSharperGotoPrevErrorInSolution)
+map <leader>xs <Action>(ShowErrorDescription)
 
 " Get current line number, helpful since I have realtive line numbers enabled and usually work in the Zen view
 nnoremap <leader>l :echo line('.')<CR>
