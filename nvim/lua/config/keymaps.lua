@@ -1,6 +1,4 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+-- Compile and watch latex file - using Skim as my PDF viewer
 vim.keymap.set(
     "n",
     "<leader>cp",
@@ -8,3 +6,4 @@ vim.keymap.set(
     { desc = "Compile latex and watch for changes" }
 )
 vim.keymap.set("n", "<leader>bb", ":GitBlameToggle <CR>", { desc = "Toggle Git blame" })
+vim.keymap.set("n", "<leader>tt", ":TodoTelescope <CR>", { desc = "Search TODOs" })

@@ -1,9 +1,9 @@
 return {
-        "folke/snacks.nvim",
-        opts = {
-                dashboard = {
-                        preset = {
-                                header = [[¯\_(ツ)_/¯]],
+    "folke/snacks.nvim",
+    opts = {
+        dashboard = {
+            preset = {
+                header = [[¯\_(ツ)_/¯]],
         -- stylua: ignore
         ---@type snacks.dashboard.Item[]
         keys = {
@@ -12,7 +12,7 @@ return {
           { icon = " ", key = "s", desc = "Restore Session", section = "session" },
           { icon = " ", key = "q", desc = "Quit", action = ":qa" },
         },
-                        },
-                },
+            },
         },
+    },
 }

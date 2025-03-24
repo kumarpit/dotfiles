@@ -1,13 +1,18 @@
+-- File tree
 return {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
-        dependencies = {
-                "nvim-lua/plenary.nvim",
-                "echasnovski/mini.icons",
-                "MunifTanjim/nui.nvim",
-                -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+        "echasnovski/mini.icons",
+        "MunifTanjim/nui.nvim",
+    },
+    opts = {
+        window = { position = "right" }, -- Files trees on the right is the only correct position
+        filesystem = {
+            filtered_items = {
+                visible = true,
+            },
         },
-        opts = {
-                window = { position = "right" },
-        },
+    },
 }
