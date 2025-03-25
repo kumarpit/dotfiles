@@ -118,3 +118,5 @@ map <leader>xs <Action>(ShowErrorDescription)
 " Get current line number, helpful since I have realtive line numbers enabled and usually work in the Zen view
 nnoremap <leader>l :echo line('.')<CR>
 
+" Show the current file in Project View (i.e in NERDTree)
+map <leader>s <Action>(SelectInProjectView)
