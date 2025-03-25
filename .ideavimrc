@@ -120,3 +120,6 @@ nnoremap <leader>l :echo line('.')<CR>
 
 " Show the current file in Project View (i.e in NERDTree)
 map <leader>s <Action>(SelectInProjectView)
+
+" Annotate with Git blame
+map <leader>bb <Action>(Annotate)
