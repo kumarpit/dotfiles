@@ -83,10 +83,9 @@ map <leader>am <action>(ShowIntentionActions)
 map <leader>as <action>(SearchEverywhere)
 
 " File navigation
+map <leader><space> <Action>(RecentFiles)
 map <leader>ff <action>(GotoFile)
-map <leader>fr <action>(RecentFiles)
 map <leader>fc <action>(FindInPath)
-map <leader><leader> <Action>(RecentFiles)
 map <leader>fl <action>(RecentLocations)
 map <leader>fs <action>(NewScratchFile)
 
