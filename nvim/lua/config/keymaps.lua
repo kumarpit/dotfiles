@@ -45,3 +45,25 @@ vim.keymap.set(
     ":lua vim.lsp.buf.references() <CR>",
     { desc = "List all references" }
 )
+
+-- Oil
+vim.keymap.set("n", "<leader>o", function()
+        local current_file_dir = vim.fn.expand("%:h")
+
+        -- Use a fallback to the current working directory if the buffer is not attached to a file
+        local target_dir = (current_file_dir == "") and vim.fn.getcwd() or current_file_dir
+
+        require("oil").open(target_dir, {
+                -- These are the same options as `:Oil --float`
+                float = {
+                        padding = 4,
+                        max_width = 80,
+                        max_height = 30,
+                        border = "rounded",
+                        win_options = {
+                                winblend = 10,
+                        },
+                },
+        })
+end, { desc = "Open Oil in a floating window at the current file's directory" })
+
